@@ -5,6 +5,8 @@ import { Trans } from '@lingui/react/macro';
 import { ReadStatus } from '@prisma/client';
 import { Link } from 'react-router';
 
+import { Code2 } from 'lucide-react';
+
 import LogoImage from '@documenso/assets/logo.png';
 import { authClient } from '@documenso/auth/client';
 import { useSession } from '@documenso/lib/client-only/providers/session';
@@ -86,7 +88,7 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
         <Link to="/" onClick={handleMenuItemClick}>
           <img
             src={LogoImage}
-            alt="Documenso Logo"
+            alt="SecureSign Logo"
             className="dark:invert"
             width={170}
             height={25}
@@ -123,8 +125,18 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
             <ThemeSwitcher />
           </div>
 
+          <a
+            href="https://github.com/documenso/documenso"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground flex items-center gap-2 text-sm"
+          >
+            <Code2 className="h-4 w-4" />
+            <Trans>Source Code</Trans>
+          </a>
+
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Documenso, Inc. <br /> All rights reserved.
+            © {new Date().getFullYear()} Alder Creek Digital. <br /> All rights reserved.
           </p>
         </div>
       </SheetContent>

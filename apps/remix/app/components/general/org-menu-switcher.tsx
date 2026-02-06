@@ -6,6 +6,7 @@ import { Trans } from '@lingui/react/macro';
 import {
   Building2Icon,
   ChevronsUpDown,
+  Code2,
   Plus,
   Settings2Icon,
   SettingsIcon,
@@ -333,6 +334,18 @@ export const OrgMenuSwitcher = () => {
                   </Link>
                 </DropdownMenuItem>
               )}
+
+              <DropdownMenuItem className="text-muted-foreground px-4 py-2" asChild>
+                <a
+                  href="https://github.com/documenso/documenso"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <Code2 className="mr-2 h-4 w-4" />
+                  <Trans>Source Code</Trans>
+                </a>
+              </DropdownMenuItem>
 
               <DropdownMenuItem
                 className="text-muted-foreground hover:!text-muted-foreground px-4 py-2"

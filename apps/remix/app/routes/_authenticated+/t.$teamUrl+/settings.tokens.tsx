@@ -30,17 +30,7 @@ export default function ApiTokensPage() {
       <SettingsHeader
         title={<Trans>API Tokens</Trans>}
         subtitle={
-          <Trans>
-            On this page, you can create and manage API tokens. See our{' '}
-            <a
-              className="text-primary underline"
-              href={'https://docs.documenso.com/developers/public-api'}
-              target="_blank"
-            >
-              Documentation
-            </a>{' '}
-            for more information.
-          </Trans>
+          <Trans>On this page, you can create and manage API tokens.</Trans>
         }
       />
 

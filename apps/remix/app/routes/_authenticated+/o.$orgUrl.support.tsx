@@ -1,11 +1,10 @@
 import { useState } from 'react';
 
 import { Trans } from '@lingui/react/macro';
-import { BookIcon, HelpCircleIcon, Link2Icon } from 'lucide-react';
+import { Code2, HelpCircleIcon, Link2Icon, Mail } from 'lucide-react';
 import { Link, useSearchParams } from 'react-router';
 
 import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
 import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
 import { Button } from '@documenso/ui/primitives/button';
 
@@ -18,7 +17,6 @@ export function meta() {
 
 export default function SupportPage() {
   const [showForm, setShowForm] = useState(false);
-  const { user } = useSession();
   const organisation = useCurrentOrganisation();
 
   const [searchParams] = useSearchParams();
@@ -44,50 +42,40 @@ export default function SupportPage() {
         </h1>
 
         <p className="text-muted-foreground mt-2">
-          <Trans>Your current plan includes the following support channels:</Trans>
+          <Trans>Need help? Here are some ways to get support:</Trans>
         </p>
 
         <div className="mt-6 flex flex-col gap-4">
           <div className="rounded-lg border p-4">
             <h2 className="flex items-center gap-2 text-lg font-bold">
-              <BookIcon className="text-muted-foreground h-5 w-5" />
-              <Link
-                to="https://docs.documenso.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                <Trans>Documentation</Trans>
-              </Link>
+              <Mail className="text-muted-foreground h-5 w-5" />
+              <Trans>Email Support</Trans>
             </h2>
             <p className="text-muted-foreground mt-1">
-              <Trans>Read our documentation to get started with Documenso.</Trans>
+              <Trans>
+                Contact us at{' '}
+                <a href="mailto:support@aldercreekdigital.com" className="text-primary underline">
+                  support@aldercreekdigital.com
+                </a>{' '}
+                for assistance.
+              </Trans>
             </p>
           </div>
           <div className="rounded-lg border p-4">
             <h2 className="flex items-center gap-2 text-lg font-bold">
-              <Link2Icon className="text-muted-foreground h-5 w-5" />
+              <Code2 className="text-muted-foreground h-5 w-5" />
               <Link
-                to="https://documen.so/discord"
+                to="https://github.com/documenso/documenso"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                <Trans>Discord</Trans>
+                <Trans>Source Code</Trans>
               </Link>
             </h2>
             <p className="text-muted-foreground mt-1">
               <Trans>
-                Join our community on{' '}
-                <Link
-                  to="https://documen.so/discord"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  Discord
-                </Link>{' '}
-                for community support and discussion.
+                SecureSign is open source. View the source code and report issues on GitHub.
               </Trans>
             </p>
           </div>

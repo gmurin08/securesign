@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
-import { ChevronsUpDown, Plus } from 'lucide-react';
+import { ChevronsUpDown, Code2, Plus } from 'lucide-react';
 import { Link } from 'react-router';
 
 import { authClient } from '@documenso/auth/client';
@@ -102,6 +102,18 @@ export const MenuSwitcher = () => {
           onClick={() => setLanguageSwitcherOpen(true)}
         >
           <Trans>Language</Trans>
+        </DropdownMenuItem>
+
+        <DropdownMenuItem className="text-muted-foreground px-4 py-2" asChild>
+          <a
+            href="https://github.com/documenso/documenso"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
+            <Code2 className="mr-2 h-4 w-4" />
+            <Trans>Source Code</Trans>
+          </a>
         </DropdownMenuItem>
 
         <DropdownMenuItem

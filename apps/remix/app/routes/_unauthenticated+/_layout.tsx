@@ -1,3 +1,5 @@
+import { Trans } from '@lingui/react/macro';
+import { Code2 } from 'lucide-react';
 import { Outlet } from 'react-router';
 
 import backgroundPattern from '@documenso/assets/images/background-pattern.png';
@@ -21,6 +23,21 @@ export default function Layout() {
         <div className="relative w-full">
           <Outlet />
         </div>
+
+        <footer className="mt-8 flex flex-col items-center gap-2 text-center">
+          <a
+            href="https://github.com/documenso/documenso"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground flex items-center gap-2 text-sm"
+          >
+            <Code2 className="h-4 w-4" />
+            <Trans>Source Code (AGPL-3.0)</Trans>
+          </a>
+          <p className="text-muted-foreground text-xs">
+            © {new Date().getFullYear()} Alder Creek Digital
+          </p>
+        </footer>
       </div>
     </main>
   );

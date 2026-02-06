@@ -2,11 +2,11 @@ import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
 
 export const appMetaTags = (title?: string) => {
   const description =
-    'Join Documenso, the open signing infrastructure, and get a 10x better signing experience. Pricing starts at $30/mo. forever! Sign in now and enjoy a faster, smarter, and more beautiful document signing process. Integrates with your favorite tools, customizable, and expandable. Support our mission and become a part of our open-source community.';
+    'SecureSign by Alder Creek Digital - A secure, open source document signing platform. Sign documents easily and securely with our modern signing solution.';
 
   return [
     {
-      title: title ? `${title} - Documenso` : 'Documenso',
+      title: title ? `${title} - SecureSign` : 'SecureSign',
     },
     {
       name: 'description',
@@ -15,11 +15,11 @@ export const appMetaTags = (title?: string) => {
     {
       name: 'keywords',
       content:
-        'Documenso, open source, DocuSign alternative, document signing, open signing infrastructure, open-source community, fast signing, beautiful signing, smart templates',
+        'SecureSign, document signing, electronic signatures, e-signatures, secure signing, digital signatures, Alder Creek Digital',
     },
     {
       name: 'author',
-      content: 'Documenso, Inc.',
+      content: 'Alder Creek Digital',
     },
     {
       name: 'robots',
@@ -27,7 +27,7 @@ export const appMetaTags = (title?: string) => {
     },
     {
       property: 'og:title',
-      content: 'Documenso - The Open Source DocuSign Alternative',
+      content: 'SecureSign - Secure Document Signing',
     },
     {
       property: 'og:description',
@@ -44,10 +44,6 @@ export const appMetaTags = (title?: string) => {
     {
       name: 'twitter:card',
       content: 'summary_large_image',
-    },
-    {
-      name: 'twitter:site',
-      content: '@documenso',
     },
     {
       name: 'twitter:description',
